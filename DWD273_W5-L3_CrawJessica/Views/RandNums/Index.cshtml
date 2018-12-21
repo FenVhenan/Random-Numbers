@@ -1,0 +1,43 @@
+﻿@model IEnumerable<DWD273_W5_L3_CrawJessica.Models.RandNum>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Random Number Generator</h2>
+
+<form action="" method="get">
+
+    @foreach (var item in Model)
+    {
+    <div>
+        <div>
+            <label>Number One</label>
+            @Html.DisplayFor(modelItem => item.LgRandNumA)
+        </div>
+        <div>
+            <label>Number Two</label>
+            @Html.DisplayFor(modelItem => item.LgRandNumB)
+        </div>
+        <div>
+            <label>Number Three</label>
+            @Html.DisplayFor(modelItem => item.LgRandNumC)
+        </div>
+        <div>
+            <label>Number Four</label>
+            @Html.DisplayFor(modelItem => item.LgRandNumD)
+        </div>
+        <div>
+            <label>Number Five</label>
+            @Html.DisplayFor(modelItem => item.LgRandNumE)
+        </div>
+        <div>
+            <label>Extra Number</label>
+            @Html.DisplayFor(modelItem => item.SmRandNum)
+        </div>
+        <span><input type="button" value="Random" class="btn btn-default" /></span>
+    </div>
+
+    }
+
+</form>
